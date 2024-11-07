@@ -1,0 +1,39 @@
+#detail-job {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: lightgray;
+  padding: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.editable-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  outline: none;
+}
+
+
+textarea {
+  width: 100%;
+  height: auto;
+  font-family: inherit;
+  font-size: inherit;
+  resize: none;
+  text-align: center;
+}
+
+textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+
