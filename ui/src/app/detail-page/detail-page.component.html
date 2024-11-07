@@ -1,0 +1,27 @@
+<div id="detail-job">
+  <h2>
+    {{ allTranslations().id }}.
+    <input [(ngModel)]="allTranslations().title" class="editable-title" />
+  </h2>
+  <p>
+    <textarea [(ngModel)]="allTranslations().textEN"></textarea>
+  </p>
+
+  <h4>Translations</h4>
+  @for (item of allTranslations().translations; track $index) {
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p> {{ item.language }}: {{ item.translatedText }} </p> <hr>
+      <button (click)="removeTranslation(item)" style="margin-left: auto;">Remove</button>
+    </div>
+  }
+
+ <!-- @if(allTranslations().translations.length == 0) {
+    <p> No translations available </p> <hr>
+  }-->
+
+  <button (click)="save()">Save changes</button>
+
+  <textarea id="new-lang" [(ngModel)]="newLanguage" style="margin-top: 1rem;" placeholder="Language..."></textarea>
+  <textarea id="new-trans" [(ngModel)]="newTranslatedText" placeholder="Translation..."></textarea>
+  <button (click)="addTranslation()">Add translation</button>
+</div>
